@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="Hospital" content="">
+        <meta name="viewport" content="Width-device-width,initial-scale=1">
+        <style> 
+            th,td{
+                border:1px black solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>
+            Hospital table
+        </h3>
+        <table  style="width:100%">
+            <thead>
+                <tr>
+                    <th> Hospital_id </th>
+                    <th> Hospital_Name </th>
+                    <th> Bed_Count </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for hospital in hospital_table %}
+                <tr>
+                    <th>{{hospital.Hospital_id}}</th>
+                    <th>{{hospital.Hospital_name}}</th>
+                    <th>{{hospital.Bed_count}}</th>
+                </tr>
+                
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+    <body>
+         <h3>
+            Doctor table
+        </h3>
+        <table  style="width:100%">
+            <thead>
+                <tr>
+                    <th> Doctor_id </th>
+                    <th> Doctor_name </th>
+                    <th> Hospital </th>
+                    <th> Join_date </th>
+                    <th> Speciality </th>
+                    <th>  Salary </th>
+                    <th> Experience </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doctor in doctor_table %}
+                <tr>
+                    <th>{{doctor.Doctor_id}}</th>
+                    <th>{{doctor.Doctor_name}}</th>
+                    <th>{{doctor.Hospital_id}}</th>
+                    <th>{{doctor.Join_date}}</th>
+                    <th>{{doctor.Speciality}}</th>
+                    <th>{{doctor.Salary}}</th>
+                    <th>{{doctor.Experience}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

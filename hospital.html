@@ -1,0 +1,6 @@
+<h1>Hospital</h1>
+    {% for hospital in hospital_table %}
+    <strong><a href="/info/{{hospital.Hospital_id}}">Hospital ID: {{hospital.Hospital_id}}</a> </strong>
+<br/>
+<br/>
+{% endfor %}
